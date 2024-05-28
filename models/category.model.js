@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const categorySchema = new mongoose.Schema({
-  categoty: {
+  category: {
     type: String,
   },
   image: {

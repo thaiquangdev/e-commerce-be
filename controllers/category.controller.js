@@ -15,10 +15,10 @@ export const createCategory = expressAsyncHandler(async (req, res) => {
 
 export const getAllCategory = expressAsyncHandler(async (req, res) => {
   try {
-    const getCategorys = await Category.find().exec();
+    const getCategories = await Category.find().exec();
     res.status(200).json({
       status: "success",
-      getCategories,
+      categories: getCategories,
     });
   } catch (error) {
     res.status(400).json({ status: "errror", message: error.message });
