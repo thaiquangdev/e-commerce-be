@@ -115,8 +115,8 @@ export const getAllSpu = expressAsyncHandler(async (req, res) => {
 
 export const getSpu = expressAsyncHandler(async (req, res) => {
   try {
-    const { id } = req.params;
-    const product = await Spu.findById(id).populate("variants").exec();
+    const { slug } = req.params;
+    const product = await Spu.findOne({ slug }).populate("variants").exec();
     res.status(200).json({ status: "success", product });
   } catch (error) {
     res
