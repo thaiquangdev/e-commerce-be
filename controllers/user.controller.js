@@ -18,15 +18,13 @@ export const forgotPassword = expressAsyncHandler(async (req, res) => {
     const resetToken = userExists.createPasswordResetToken();
     await userExists.save({ validateBeforeSave: false });
 
-    const resetURL = `${req.protocol}://${req.get(
-      "host"
-    )}/api/users/reset-password/${resetToken}`;
+    const resetURL = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
     const message = `Forgot your password? Submit a PATCH request with your new password and passwordConfirm to: ${resetURL}.\nIf you didn't forget your password, please ignore this email!`;
     // send mail
     await sendEmail({
       email: userExists.email,
       subject: "Your password reset token (valid for 10 minutes)",
-      message,
+      text: message,
     });
     res.status(200).json({
       status: "success",
@@ -61,7 +59,7 @@ export const resetPassword = expressAsyncHandler(async (req, res) => {
     user.passwordResetExpires = undefined;
     await user.save();
     res.status(200).json({
-      success: "success",
+      status: "success",
       message: "Password has been reset successfully",
     });
   } catch (error) {

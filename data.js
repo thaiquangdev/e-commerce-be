@@ -93,7 +93,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "512GB",
@@ -109,7 +109,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "1TB",
@@ -125,7 +125,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "256GB",
@@ -141,7 +141,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "512GB",
@@ -157,7 +157,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "1TB",
@@ -173,7 +173,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-black-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "256GB",
@@ -189,7 +189,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "512GB",
@@ -205,7 +205,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "1TB",
@@ -221,7 +221,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-3-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-tu-nhien-4-1.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "256GB",
@@ -237,7 +237,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-3-3.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-4-3.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "512GB",
@@ -253,7 +253,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-3-3.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-4-3.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "1TB",
@@ -269,7 +269,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-3-3.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-white-4-3.jpg",
     ],
-    spuId: "6654afcadb2c8aa4014711a0",
+    spuId: "665993d86f0cc55d062d1898",
   },
   {
     ram: "8 GB - 256GB",
@@ -294,7 +294,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-xanh-12.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-xanh-13.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
   {
     ram: "8 GB - 256GB",
@@ -319,7 +319,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-12.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-13.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
   {
     ram: "8 GB - 256GB",
@@ -344,7 +344,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s-ultra-tim-12.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s-ultra-tim-13.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
   {
     ram: "8 GB - 256GB",
@@ -369,7 +369,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-kem-12-1.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-kem-13-1.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
   {
     ram: "12 GB - 512GB",
@@ -394,7 +394,7 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-xanh-12.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-xanh-13.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
   {
     ram: "12 GB - 512GB",
@@ -419,6 +419,6 @@ export const productSku = [
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-12.jpg",
       "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-13.jpg",
     ],
-    spuId: "6654ac23db2c8aa401471196",
+    spuId: "665995a405350d14ccee5b94",
   },
 ];
