@@ -5,8 +5,9 @@ import slugify from "slugify";
 
 export const createSpu = expressAsyncHandler(async (req, res) => {
   try {
-    const { title, description, priceOld, priceNew, thumb, brand, category } =
+    const { title, description, priceOld, priceNew, brand, category } =
       req.body;
+    const thumb = req.file.path;
     const spu = new Spu({
       title,
       description,
@@ -30,37 +31,30 @@ export const createSpu = expressAsyncHandler(async (req, res) => {
 
 export const createSku = expressAsyncHandler(async (req, res) => {
   try {
-    const skus = req.body;
+    const { ram, color, priceOld, priceNew, stock, spuId } = req.body;
+    const thumb = req.files.thumb[0].path;
+    const images = req.files.images.map((file) => file.path);
 
-    if (!Array.isArray(skus)) {
-      return res.status(400).json({
-        status: "error",
-        message: "Payload should be an array of SKUs",
-      });
-    }
-
-    const spuId = skus[0].spuId;
-    const skuDocuments = skus.map((sku) => ({
-      ram: sku.ram,
-      color: sku.color,
-      priceOld: sku.priceOld,
-      priceNew: sku.priceNew,
-      stock: sku.stock,
-      thumb: sku.thumb,
-      images: sku.images,
+    const skuDocuments = new Sku({
+      ram,
+      color,
+      priceOld,
+      priceNew,
+      stock,
+      thumb,
+      images,
       spu: spuId,
-    }));
+    });
 
-    const savedSkus = await Sku.insertMany(skuDocuments);
-    const skuIds = savedSkus.map((sku) => sku._id);
+    const savedSku = await skuDocuments.save();
 
     await Spu.findByIdAndUpdate(spuId, {
-      $push: { variants: { $each: skuIds } },
+      $push: { variants: savedSku._id },
     });
 
     res.status(200).json({
       status: "success",
-      skus: savedSkus,
+      skus: savedSku,
     });
   } catch (error) {
     res.status(400).json({ message: error.message, status: "error" });
@@ -70,8 +64,8 @@ export const createSku = expressAsyncHandler(async (req, res) => {
 export const getAllSpu = expressAsyncHandler(async (req, res) => {
   try {
     const { sort, search, brand, category } = req.query;
-    const page = req.query.page || 1;
-    const limit = req.query.limit || 10;
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
 
     //filter
     const brandFilter = brand ? { brand } : {};
@@ -116,8 +110,20 @@ export const getAllSpu = expressAsyncHandler(async (req, res) => {
 export const getSpu = expressAsyncHandler(async (req, res) => {
   try {
     const { slug } = req.params;
-    const product = await Spu.findOne({ slug }).populate("variants").exec();
-    res.status(200).json({ status: "success", product });
+    const product = await Spu.findOne({ slug })
+      .populate("variants")
+      .populate({
+        path: "ratings",
+        populate: {
+          path: "userId",
+        },
+      })
+      .exec();
+    const relateProduct = await Spu.find({
+      brand: product.brand,
+      _id: { $ne: product._id },
+    });
+    res.status(200).json({ status: "success", product, relateProduct });
   } catch (error) {
     res
       .status(400)

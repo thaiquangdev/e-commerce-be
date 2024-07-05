@@ -29,6 +29,11 @@ const SpuSchema = new mongoose.Schema({
     default: 0,
   },
   variants: [{ type: Types.ObjectId, ref: "Sku" }],
+  ratings: [{ type: mongoose.Schema.Types.ObjectId, ref: "Rating" }],
+  totalRatings: {
+    type: Number,
+    default: 0,
+  },
 });
 
 const Spu = new mongoose.model("Spu", SpuSchema);

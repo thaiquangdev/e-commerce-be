@@ -4,6 +4,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDb } from "./config/connectDb.js";
 import { initialRoute } from "./routes/index.js";
+import passport from "./utils/passports/passport.js";
 
 dotenv.config();
 const app = express();

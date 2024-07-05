@@ -7,6 +7,11 @@ const cartSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    spuId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Spu",
+      required: true,
+    },
     title: {
       type: String,
       required: true,
