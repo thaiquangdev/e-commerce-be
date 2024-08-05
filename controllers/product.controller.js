@@ -63,28 +63,45 @@ export const createSku = expressAsyncHandler(async (req, res) => {
 
 export const getAllSpu = expressAsyncHandler(async (req, res) => {
   try {
-    const { sort, search, brand, category } = req.query;
+    const {
+      sort,
+      search,
+      brand,
+      category,
+      priceGte,
+      priceLte,
+      priceGt,
+      priceLt,
+    } = req.query;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
 
-    //filter
+    // Filter
     const brandFilter = brand ? { brand } : {};
-
     const categoryFilter = category ? { category } : {};
 
-    // search
+    // Search
     const title = search ? { title: { $regex: search, $options: "i" } } : {};
+
+    // Price filter
+    const priceFilter = {};
+    if (priceGte) priceFilter.$gte = parseFloat(priceGte);
+    if (priceLte) priceFilter.$lte = parseFloat(priceLte);
+    if (priceGt) priceFilter.$gt = parseFloat(priceGt);
+    if (priceLt) priceFilter.$lt = parseFloat(priceLt);
 
     const count = await Spu.countDocuments({
       ...brandFilter,
       ...categoryFilter,
       ...title,
+      ...(Object.keys(priceFilter).length && { price: priceFilter }),
     });
 
     const products = await Spu.find({
       ...title,
       ...brandFilter,
       ...categoryFilter,
+      ...(Object.keys(priceFilter).length && { price: priceFilter }),
     })
       .sort(sort)
       .limit(limit)
